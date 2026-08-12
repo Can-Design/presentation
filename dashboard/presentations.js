@@ -26,16 +26,4 @@ window.PRESENTATIONS = [
     visibility: "Public presentation",
     publicUrl: "https://presentation.can-design.workers.dev/presentations/913026-maple-ridge-orthodontic-exterior-window-graphics/"
   },
-  {
-    id: "tec-host-2026",
-
-    title: "TEC Host",
-    estimateNumber: "Not linked",
-    client: "Can-Design",
-    project: "TEC Host presentation",
-    status: "Live",
-    updatedDate: "2026-08-11",
-    visibility: "Public presentation",
-    publicUrl: "https://presentation.can-design.workers.dev/presentations/tec-host-2026/"
-  }
 ];
