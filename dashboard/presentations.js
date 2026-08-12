@@ -1,0 +1,30 @@
+/*
+  Presentation Dashboard data
+  Add one object per presentation. Keep estimateNumber as "Not linked" unless
+  a verified estimate reference exists. Do not add unverified project records.
+*/
+window.PRESENTATIONS = [
+  {
+    id: "maple-ridge-913026",
+    title: "Maple Ridge Orthodontic — Exterior Window Graphics",
+    estimateNumber: "913026",
+    client: "Maple Ridge Orthodontic",
+    project: "Exterior window graphics",
+    status: "Live",
+    updatedDate: "2026-08-12",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/913026-maple-ridge-orthodontic-exterior-window-graphics/"
+  },
+  {
+    id: "tec-host-2026",
+
+    title: "TEC Host",
+    estimateNumber: "Not linked",
+    client: "Can-Design",
+    project: "TEC Host presentation",
+    status: "Live",
+    updatedDate: "2026-08-11",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/tec-host-2026/"
+  }
+];
