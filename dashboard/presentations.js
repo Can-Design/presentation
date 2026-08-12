@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "watermark-beverage-monument-sign-options",
+    title: "Watermark Beverage — Monument & Exterior Wall Sign Options",
+    estimateNumber: "Not linked",
+    client: "Watermark Beverage",
+    project: "Monument and exterior wall signage",
+    status: "Live",
+    updatedDate: "2026-08-12",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/watermark-beverage-monument-sign-options/"
+  },
+  {
     id: "ash-street-bistro-913027",
     title: "Ash Street Bistro — Exterior Signage",
     estimateNumber: "913027",
