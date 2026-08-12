@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "city-of-delta-913013",
+    title: "City of Delta — Seasonal Roadside Signage",
+    estimateNumber: "913013",
+    client: "City of Delta",
+    project: "Seasonal roadside signage",
+    status: "Live",
+    updatedDate: "2026-08-11",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/913013-city-of-delta-seasonal-roadside-signage/"
+  },
+  {
     id: "maple-ridge-913026",
     title: "Maple Ridge Orthodontic — Exterior Window Graphics",
     estimateNumber: "913026",
