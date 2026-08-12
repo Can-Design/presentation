@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "ash-street-bistro-913027",
+    title: "Ash Street Bistro — Exterior Signage",
+    estimateNumber: "913027",
+    client: "Ash Street Bistro",
+    project: "Exterior signage",
+    status: "Live",
+    updatedDate: "2026-08-12",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/913027-ash-street-bistro-exterior-signage/"
+  },
+  {
     id: "city-of-delta-913013",
     title: "City of Delta — Seasonal Roadside Signage",
     estimateNumber: "913013",
