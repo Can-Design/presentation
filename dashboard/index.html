@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Private internal presentation index for the Can-Design team.">
+  <title>Presentation Dashboard · Can-Design</title>
+  <style>
+    :root { --ink:#112126; --muted:#66777c; --canvas:#f4f5f1; --panel:#fff; --line:#d8dfdc; --teal:#006c73; --teal-pale:#ddf2ef; --orange:#ff5a1f; --live:#177e57; --live-pale:#e2f4eb; --shadow:0 16px 45px rgba(16,35,37,.08); }
+    * { box-sizing:border-box; } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; } html { background:var(--canvas); } body { margin:0; color:var(--ink); background:var(--canvas); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.5; }
+    a { color:inherit; } .shell { width:min(1180px, calc(100% - 48px)); margin:auto; }
+    .topbar { background:var(--ink); color:#fff; padding:17px 0; border-bottom:1px solid rgba(255,255,255,.12); }
+    .brand { display:flex; align-items:center; gap:12px; font-size:.86rem; font-weight:800; letter-spacing:.085em; text-transform:uppercase; } .brand-mark { width:11px; height:11px; background:var(--orange); border-radius:50%; box-shadow:18px 0 0 var(--teal-pale); }
+    .topbar .shell { display:flex; justify-content:space-between; align-items:center; gap:24px; }.top-note { color:#b9c9cb; font-size:.82rem; }
+    main { padding:58px 0 80px; }.eyebrow { margin:0 0 12px; color:var(--teal); font-size:.75rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }.hero { display:grid; grid-template-columns:minmax(0,1fr) 350px; gap:34px; align-items:end; margin-bottom:36px; }.hero h1 { max-width:690px; font-size:clamp(2.55rem, 6vw, 5.15rem); letter-spacing:-.065em; line-height:.94; margin:0; }.hero h1 em { font-style:normal; color:var(--orange); }.hero-copy { max-width:690px; color:var(--muted); font-size:1.07rem; margin:21px 0 0; }.index-note { background:var(--teal); color:#fff; padding:21px 23px; border-radius:8px; box-shadow:var(--shadow); }.index-note strong { display:block; margin-bottom:6px; font-size:.97rem; }.index-note p { margin:0; color:#d6f0ed; font-size:.9rem; }
+    .controls { display:grid; grid-template-columns:minmax(0,1fr) 185px 180px; gap:12px; padding:13px; background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:0 6px 24px rgba(16,35,37,.04); }.control { min-height:46px; border:1px solid var(--line); border-radius:5px; background:#fff; color:var(--ink); font:inherit; padding:0 13px; }.search-wrap { position:relative; }.search-wrap span { position:absolute; left:14px; top:11px; color:var(--muted); pointer-events:none; }.search-wrap input { width:100%; padding-left:40px; }.control:focus { outline:3px solid rgba(0,108,115,.17); border-color:var(--teal); }
+    .results-bar { display:flex; align-items:center; justify-content:space-between; gap:18px; margin:28px 0 14px; }.results-bar h2 { margin:0; font-size:1.15rem; letter-spacing:-.02em; }.results-count { color:var(--muted); font-size:.89rem; }.selection-bar { display:none; align-items:center; justify-content:space-between; gap:16px; margin:0 0 14px; padding:12px 14px; border:1px solid #9dc8c3; border-radius:7px; background:var(--teal-pale); color:var(--ink); font-size:.88rem; }.selection-bar.active { display:flex; }.selection-actions { display:flex; gap:9px; }.selection-button { appearance:none; border:0; border-radius:5px; padding:9px 11px; background:var(--teal); color:#fff; cursor:pointer; font:700 .8rem inherit; }.selection-button.secondary { background:transparent; border:1px solid #87aaa7; color:var(--teal); }.presentation-card { display:grid; grid-template-columns:28px minmax(190px,1.1fr) minmax(360px,1.7fr) auto; gap:20px; align-items:center; padding:27px; border:1px solid var(--line); border-radius:8px; background:var(--panel); box-shadow:0 5px 19px rgba(16,35,37,.035); } .remove-select { display:grid; place-items:center; align-self:start; padding-top:6px; }.remove-select input { width:18px; height:18px; accent-color:var(--orange); cursor:pointer; }.presentation-card:hover { border-color:#aabbb8; box-shadow:var(--shadow); }.card-type { display:flex; gap:10px; align-items:center; color:var(--teal); font-size:.74rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }.card-type i { width:8px; height:8px; border-radius:50%; background:var(--teal); }.presentation-card h3 { margin:9px 0 5px; font-size:clamp(1.35rem,2vw,1.8rem); letter-spacing:-.04em; line-height:1.05; }.client { margin:0; color:var(--muted); }.details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px 27px; margin:0; }.detail dt { color:var(--muted); font-size:.72rem; font-weight:800; letter-spacing:.085em; text-transform:uppercase; }.detail dd { margin:3px 0 0; font-size:.94rem; font-weight:650; }.detail.estimate dd { color:var(--orange); font-size:clamp(1.35rem,2.2vw,1.9rem); font-weight:850; letter-spacing:-.045em; line-height:1.05; }.status { display:inline-flex; align-items:center; gap:7px; color:var(--live); background:var(--live-pale); padding:5px 8px; border-radius:20px; font-size:.75rem; font-weight:800; }.status:before { content:""; width:6px; height:6px; border-radius:50%; background:currentColor; }.visibility { color:var(--teal); }.card-action { display:flex; flex-direction:column; gap:9px; align-items:stretch; min-width:156px; }.public-link { display:inline-flex; justify-content:center; align-items:center; gap:8px; padding:11px 15px; border-radius:5px; background:var(--ink); color:#fff; text-decoration:none; font-size:.88rem; font-weight:750; white-space:nowrap; }.public-link:hover,.public-link:focus { background:var(--orange); }.public-link:focus { outline:3px solid rgba(255,90,31,.25); outline-offset:2px; }.external { font-size:1rem; line-height:1; }.link-caption { color:var(--muted); font-size:.73rem; text-align:center; }.empty { padding:44px 24px; text-align:center; border:1px dashed #b7c5c2; border-radius:8px; color:var(--muted); background:#fafbf9; }.empty[hidden] { display:none; }
+    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; } footer strong { color:var(--ink); }
+    @media (max-width:900px) { .hero { grid-template-columns:1fr; }.index-note { max-width:600px; }.presentation-card { grid-template-columns:1fr; gap:20px; }.card-action { flex-direction:row; align-items:center; }.link-caption { text-align:left; }.public-link { width:max-content; } }
+    @media (max-width:620px) { .shell { width:min(100% - 32px,1180px); }.topbar .shell { align-items:flex-start; flex-direction:column; gap:6px; } main { padding:42px 0 58px; }.hero { margin-bottom:25px; }.hero h1 { font-size:3rem; }.controls { grid-template-columns:1fr; padding:10px; }.results-bar { margin-top:24px; }.presentation-card { padding:21px; }.details { grid-template-columns:1fr 1fr; gap:13px; }.card-action { align-items:flex-start; flex-direction:column; }.public-link { width:100%; }.link-caption { text-align:center; width:100%; } }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="shell"><div class="brand"><span class="brand-mark" aria-hidden="true"></span>Can-Design / Presentation Dashboard</div><div class="top-note">Private team workspace</div></div></header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title"><div><p class="eyebrow">Internal presentation index</p><h1 id="page-title">Every presentation, <em>easy to find.</em></h1><p class="hero-copy">A working index for the Can-Design team to locate approved presentation links and the project context behind them.</p></div><aside class="index-note"><strong>Internal index, not a public directory</strong><p>This page is for the Can-Design team. Individual cards can link to externally shared presentations, but this index itself is not intended for public discovery.</p></aside></section>
+    <section aria-label="Presentation controls"><div class="controls"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="control" type="search" placeholder="Search title, client or estimate #" autocomplete="off"></label><select id="status-filter" class="control" aria-label="Filter by status"><option value="all">All statuses</option></select><select id="visibility-filter" class="control" aria-label="Filter by visibility"><option value="all">All visibility</option></select></div></section>
+    <section aria-labelledby="results-title"><div class="results-bar"><h2 id="results-title">Presentations</h2><span id="results-count" class="results-count" aria-live="polite"></span></div><div id="selection-bar" class="selection-bar" aria-live="polite"><span id="selection-copy"></span><div class="selection-actions"><button id="clear-selection" class="selection-button secondary" type="button">Clear</button><button id="copy-deletion" class="selection-button" type="button">Copy deletion request</button></div></div><div id="cards" class="cards"></div><div id="empty" class="empty" hidden>No presentations match those filters. Try a different search or reset a filter.</div></section>
+  </main>
+  <footer><div class="shell"><strong>Can-Design Presentation Dashboard</strong> · Internal index of presentation records and their approved external links.</div></footer>
+  <script src="presentations.js"></script>
+  <script>
+    (() => {
+      const cards = document.querySelector('#cards');
+      const empty = document.querySelector('#empty');
+      const count = document.querySelector('#results-count');
+      const search = document.querySelector('#search');
+      const status = document.querySelector('#status-filter');
+      const visibility = document.querySelector('#visibility-filter');
+      const entries = Array.isArray(window.PRESENTATIONS) ? window.PRESENTATIONS : [];
+      const selected = new Set();
+      const selectionBar = document.querySelector('#selection-bar');
+      const selectionCopy = document.querySelector('#selection-copy');
+      const esc = value => String(value ?? '').replace(/[&<>'"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char]);
+      const formatDate = value => { const date = new Date(`${value}T12:00:00`); return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat('en-CA', { year:'numeric', month:'short', day:'numeric' }).format(date); };
+      const populate = (element, values) => values.forEach(value => element.insertAdjacentHTML('beforeend', `<option value="${esc(value)}">${esc(value)}</option>`));
+      populate(status, [...new Set(entries.map(item => item.status).filter(Boolean))]);
+      populate(visibility, [...new Set(entries.map(item => item.visibility).filter(Boolean))]);
+      const updateSelection = () => {
+        const chosen = entries.filter(item => selected.has(item.publicUrl));
+        selectionBar.classList.toggle('active', chosen.length > 0);
+        selectionCopy.textContent = `${chosen.length} presentation${chosen.length === 1 ? '' : 's'} selected for deletion review`;
+      };
+      const copyDeletionRequest = async () => {
+        const chosen = entries.filter(item => selected.has(item.publicUrl));
+        const request = `Delete these presentation records and public pages:\n${chosen.map(item => `- ${item.title} | Estimate # ${item.estimateNumber} | ${item.publicUrl}`).join('\n')}`;
+        try { await navigator.clipboard.writeText(request); alert('Deletion request copied. Paste it into chat when you are ready for the permanent removal.'); }
+        catch { window.prompt('Copy this deletion request and paste it into chat:', request); }
+      };
+      const render = () => {
+        const term = search.value.trim().toLowerCase();
+        const matched = entries.filter(item => {
+          const searchable = [item.title, item.estimateNumber, item.client, item.project, item.status, item.visibility].join(' ').toLowerCase();
+          return (!term || searchable.includes(term)) && (status.value === 'all' || item.status === status.value) && (visibility.value === 'all' || item.visibility === visibility.value);
+        });
+        count.textContent = `${matched.length} ${matched.length === 1 ? 'presentation' : 'presentations'} shown`;
+        cards.innerHTML = matched.map(item => `<article class="presentation-card"><label class="remove-select" title="Select ${esc(item.title)} for deletion review"><input type="checkbox" data-presentation="${esc(item.publicUrl)}" ${selected.has(item.publicUrl) ? 'checked' : ''}><span class="sr-only">Select ${esc(item.title)} for deletion review</span></label><div><div class="card-type"><i aria-hidden="true"></i>Presentation</div><h3>${esc(item.title)}</h3><p class="client">${esc(item.client)} · ${esc(item.project)}</p></div><dl class="details"><div class="detail estimate"><dt>Estimate #</dt><dd>${esc(item.estimateNumber)}</dd></div><div class="detail"><dt>Status</dt><dd><span class="status">${esc(item.status)}</span></dd></div><div class="detail"><dt>Updated</dt><dd>${esc(formatDate(item.updatedDate))}</dd></div><div class="detail"><dt>Visibility</dt><dd class="visibility">${esc(item.visibility)}</dd></div></dl><div class="card-action"><a class="public-link" href="${esc(item.publicUrl)}" target="_blank" rel="noopener noreferrer">Open presentation <span class="external" aria-hidden="true">↗</span></a><span class="link-caption">Opens external public link</span></div></article>`).join('');
+        empty.hidden = matched.length !== 0;
+        cards.querySelectorAll('[data-presentation]').forEach(box => box.addEventListener('change', event => { event.target.checked ? selected.add(event.target.dataset.presentation) : selected.delete(event.target.dataset.presentation); updateSelection(); }));
+        updateSelection();
+      };
+      document.querySelector('#clear-selection').addEventListener('click', () => { selected.clear(); render(); });
+      document.querySelector('#copy-deletion').addEventListener('click', copyDeletionRequest);
+      [search, status, visibility].forEach(element => element.addEventListener(element === search ? 'input' : 'change', render));
+      render();
+    })();
+  </script>
+</body>
+</html>
