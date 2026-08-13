@@ -6,7 +6,7 @@
 window.PRESENTATIONS = [
   {
     id: "watermark-beverage-913037",
-    title: "913037 Watermark Beverage Inc — Monument Sign",
+    title: "Watermark Beverage Inc — Monument Sign",
     estimateNumber: "913037",
     client: "Watermark Beverage",
     project: "Monument and exterior wall signage",
