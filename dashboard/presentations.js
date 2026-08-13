@@ -48,4 +48,15 @@ window.PRESENTATIONS = [
     visibility: "Public presentation",
     publicUrl: "https://presentation.can-design.workers.dev/presentations/913026-maple-ridge-orthodontic-exterior-window-graphics/"
   },
+  {
+    id: "sushi-mahana-913039",
+    title: "Sushi Mahana — Exterior Channel Letter",
+    estimateNumber: "913039",
+    client: "Sushi Mahana",
+    project: "Exterior channel-letter signage",
+    status: "Live",
+    updatedDate: "2026-08-13",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/sushi-mahana-channel-letter-options/"
+  },
 ];
