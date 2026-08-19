@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "devonshire-properties-913050",
+    title: "Devonshire Properties — Monument Sign",
+    estimateNumber: "EST-913050",
+    client: "Devonshire Properties",
+    project: "Three monument signs",
+    status: "Live",
+    updatedDate: "2026-08-19",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/913050-devonshire-properties-monument-sign/"
+  },
+  {
     id: "watermark-beverage-913037",
     title: "Watermark Beverage Inc — Monument Sign",
     estimateNumber: "913037",
