@@ -7,9 +7,9 @@ window.PRESENTATIONS = [
   {
     id: "devonshire-properties-913050",
     title: "Devonshire Properties — Monument Sign",
-    estimateNumber: "EST-913050",
+    estimateNumber: "913050",
     client: "Devonshire Properties",
-    project: "Three monument signs",
+    project: "Three monument signs + balcony flat sign",
     status: "Live",
     updatedDate: "2026-08-19",
     visibility: "Public presentation",
