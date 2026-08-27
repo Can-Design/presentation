@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "ashdale-gallery-913071",
+    title: "Ashdale Gallery — Channel Letter Options",
+    estimateNumber: "913071",
+    client: "Ashdale Gallery",
+    project: "Exterior channel-letter signage",
+    status: "Live",
+    updatedDate: "2026-08-27",
+    visibility: "Public presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/presentations/913071-ashdale-gallery-channel-letter-options/"
+  },
+  {
     id: "devonshire-properties-913050",
     title: "Devonshire Properties — Monument Sign",
     estimateNumber: "913050",
