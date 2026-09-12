@@ -1,6 +1,14 @@
 name = "presentation"
+main = "src/index.js"
 compatibility_date = "2026-08-01"
 
 [assets]
 directory = "./"
+binding = "ASSETS"
 html_handling = "auto-trailing-slash"
+run_worker_first = true
+
+[[d1_databases]]
+binding = "PRESENTATION_LINKS"
+database_name = "presentation-share-links"
+database_id = "18bf66eb-82a7-4c83-b2f5-99b79d948dff"
