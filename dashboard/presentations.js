@@ -16,17 +16,6 @@ window.PRESENTATIONS = [
     publicUrl: "https://presentation.can-design.workers.dev/presentations/national-exterior-access-office-refresh-can-design/"
   },
   {
-    id: "national-exterior-access-office-refresh",
-    title: "National Exterior Access — Office Refresh",
-    estimateNumber: "Not linked",
-    client: "National Exterior Access",
-    project: "Office refresh presentation",
-    status: "Live",
-    updatedDate: "2026-09-10",
-    visibility: "Client-ready presentation",
-    publicUrl: "https://presentation.can-design.workers.dev/presentations/national-exterior-access-office-refresh/"
-  },
-  {
     id: "ashdale-gallery-913071",
     title: "Ashdale Gallery — Channel Letter Options",
     estimateNumber: "913071",
