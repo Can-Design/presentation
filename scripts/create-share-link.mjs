@@ -22,7 +22,7 @@ const expiry = now + Math.round(days * 86400);
 const sql = `INSERT INTO share_links (token, target_path, expires_at, created_at) VALUES ('${token}', '${target}', ${expiry}, ${now});`;
 
 execFileSync("npx", ["wrangler", "d1", "execute", "presentation-share-links", "--remote", "--command", sql], {
-  stdio: "inherit",
+  stdio: "ignore",
   env: process.env
 });
 
