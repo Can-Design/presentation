@@ -18,6 +18,13 @@ function cleanAssetPath(value) {
   }
 }
 
+function fetchAsset(request, env, assetPath) {
+  const url = new URL(request.url);
+  url.pathname = assetPath.endsWith("/") ? `${assetPath}index.html` : assetPath;
+  url.search = "";
+  return env.ASSETS.fetch(new Request(url, request));
+}
+
 async function sharedAsset(request, env, token, assetPath) {
   const record = await env.PRESENTATION_LINKS
     .prepare("SELECT target_path, expires_at, revoked_at FROM share_links WHERE token = ?1")
@@ -49,7 +56,10 @@ export default {
 
     // Existing client URLs remain intentionally available during the compatibility window.
     if (pathname.startsWith("/presentations/") || pathname === "/robots.txt") {
-      return env.ASSETS.fetch(request);
+      if (pathname.startsWith("/presentations/") && !pathname.includes(".") && !pathname.endsWith("/")) {
+        return Response.redirect(`${url.pathname}/${url.search}`, 307);
+      }
+      return fetchAsset(request, env, pathname);
     }
 
     // New protected decks live under /private/ and can only be reached through /s/<token>/.
