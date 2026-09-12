@@ -5,6 +5,17 @@
 */
 window.PRESENTATIONS = [
   {
+    id: "arup-vancouver-913108",
+    title: "ARUP Vancouver — Reception Logo",
+    estimateNumber: "913108",
+    client: "ARUP Vancouver",
+    project: "Reception halo-lit dimensional logo · two size options",
+    status: "Live",
+    updatedDate: "2026-09-12",
+    visibility: "Private client presentation",
+    publicUrl: "https://presentation.can-design.workers.dev/s/2p-rG_fHDz9UGu-pFarLOJc2SfV9ufBnJcfg-0na0vM/"
+  },
+  {
     id: "national-exterior-access-office-refresh-can-design",
     title: "National Exterior Access — Office Refresh (Can-Design Edition)",
     estimateNumber: "913106",
