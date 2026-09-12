@@ -63,7 +63,9 @@ export default {
     }
 
     // New protected decks live under /private/ and can only be reached through /s/<token>/.
-    if (pathname.startsWith("/private/") || pathname === "/" || pathname.startsWith("/dashboard/")) return NOT_FOUND();
+    if (pathname === "/dashboard") return Response.redirect(`${url.pathname}/${url.search}`, 307);
+    if (pathname.startsWith("/dashboard/")) return fetchAsset(request, env, pathname);
+    if (pathname.startsWith("/private/") || pathname === "/") return NOT_FOUND();
 
     const match = pathname.match(/^\/s\/([A-Za-z0-9_-]{32,})\/(.*)$/);
     if (match) return sharedAsset(request, env, match[1], match[2]);
