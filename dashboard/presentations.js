@@ -20,9 +20,9 @@ window.PRESENTATIONS = [
     title: "National Exterior Access — Office Refresh (Can-Design Edition)",
     estimateNumber: "913106",
     client: "National Exterior Access",
-    project: "Office refresh presentation · Can-Design branded edition",
+    project: "Office refresh presentation · Can-Design branded edition · reception option added",
     status: "Live",
-    updatedDate: "2026-09-10",
+    updatedDate: "2026-09-14",
     visibility: "Client-ready presentation",
     publicUrl: "https://presentation.can-design.workers.dev/presentations/national-exterior-access-office-refresh-can-design/"
   },
